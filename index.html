@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/74e609ff47.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="center">
+            <img src="imagens/logo.png" alt="logo">
+            <button class="btn-mobile" onclick="mobileMenu()"><i class="fas fa-bars"></i></button>
+            <nav class="nav-mobile">
+                <ul>
+                    <li><a style="color: white;" href="#" onclick="carregar(0)" id="_cadastro">Cadastro</a></li>
+                    <li><a href="#" onclick="carregar(1), carregaListaDespesas()" id="_consulta">Consulta</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <section id="titulo">
+        <div class="center">
+            <h1>Registro de despesa</h1>
+        </div>
+    </section>
+
+    <section class="form1">
+        <div class="center">
+            <select class="forms form-mobile-w100" id="ano">
+                <option selected value="">Ano</option>
+            </select>
+
+            <select id="mes" class="forms form-mobile-w100">
+                <option selected value="">Mês</option>
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+
+            <input class="forms form-mobile-w100" type="text" id="dia" placeholder="Dia">
+            
+            <select class="forms form-mobile-w100" id="tipo">
+                <option selected value="">Tipo</option>
+                <option value="1">Alimentação</option>
+                <option value="2">Educação</option>
+                <option value="3">Lazer</option>
+                <option value="4">Saúde</option>
+                <option value="5">Transporte</option>
+            </select>
+            
+
+        </div>
+    </section>
+
+    <section class="form2">
+        <div class="center">
+            <input class="forms-single form-mobile-w100" type="text" placeholder="descrição" id="descricao">
+
+            <input class="forms-single form-mobile-w100" type="text" placeholder="valor" id="valor">
+
+            <button id="pesquisar" onclick="cadastrarDespesa()">
+                <i class="fas fa-plus"></i>
+            </button>
+            
+            
+            
+        </div>
+    </section>
+    <div class="consulta">
+
+    </div>
+
+    <div class="fundo"></div>
+    <div class="modal" id="modal">
+        <p class="modal-titulo" style="color: red; padding: 15px 0;">Erro na gravação</p>
+        
+        <p class="modal-desc" style="font-size: 18px; margin-top: 15px;">Algum campo pode estar vazio</p>
+        <div class="btn-do-modal modal-close" onclick="modal(0)">Voltar e corrigir</div>
+    </div>
+    
+    
+</body>
+<script src="app_site.js"></script>
+</html>
